@@ -64,11 +64,23 @@ public class Hash
     }
 
     /// <summary>
+    /// Generates a Single Hash of a Password
+    /// </summary>
+    /// <param name="password"></param>
+    /// <returns></returns>
+    public string GenerateSingleHash(string password)
+    {
+        var salt = GenerateSalt();
+        var hash = GenerateHash(password, salt);
+        return hash;
+    }
+
+    /// <summary>
     /// Check if Hash is Supported
     /// </summary>
     /// <param name="hash"></param>
     /// <returns></returns>
-    private bool IsHashSupported(string hash)
+    public bool IsHashSupported(string hash)
     {
         return hash.Contains("$SHA256$V1$"); // $MYHASH$V1$
     }

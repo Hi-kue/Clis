@@ -1,0 +1,8 @@
+﻿Purpose of App :: Passman
+---------------------------
+(1). Store Passwords into a Database,
+(2). Store Password Hash into a Database,
+(3). Store Password Salt into a Database,
+(4). Retrieve Stored Passwords from a Database,
+(5). Encrypt/Decrypt Passwords,
+(6). Become a Standalone Password Manager Application;

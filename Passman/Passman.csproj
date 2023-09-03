@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="FigletFontArt" Version="1.0.0" />
+      <PackageReference Include="SharPrompt" Version="2.4.5" />
       <PackageReference Include="ShellProgressBar" Version="5.2.0" />
       <PackageReference Include="Spectre.Console" Version="0.47.0" />
     </ItemGroup>

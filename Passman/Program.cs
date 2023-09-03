@@ -1,21 +1,29 @@
 ﻿using Spectre.Console;
 using Spectre.Console.Extensions;
+using Sharprompt;
+using ShellProgressBar;
+using FigletFontArt;
+using Passman.Config;
 
 internal abstract class Program
 {
-    /*
-     * Purpose of this Application
-     * - Store Passwords in a Database;
-     * - Store Password Hash in a Database;
-     * - Store Password Salt in a Database;
-     * - Retrieve Stored Passwords from a Database;
-     * - Encrypt/Decrypt Passwords;
-     * - Create a GUI for the Application;
-     */
-    
     /// <nuget_packages>
-    /// <nuget id="Spectre.Console" />
-    /// <nuget id="ShellProgressBar" />
+    /// <nuget id="Spectre.Console">
+    ///   <version>0.40.0</version>
+    ///   <install>dotnet add package Spectre.Console</install>
+    /// </nuget>
+    /// <nuget id="ShellProgressBar">
+    ///  <version>5.0.0</version>
+    ///  <install>dotnet add package ShellProgressBar</install>
+    /// </nuget>
+    /// <nuget id="SharPrompt">
+    ///  <version>1.0.0</version>
+    ///  <install>dotnet add package SharPrompt</install>
+    /// </nuget>
+    /// <nuget id="FigletFontArt">
+    ///  <version>1.0.0</version>
+    ///  <install>dotnet add package FigletFontArt  --version 1.0.0</install>
+    /// </nuget>
     /// </nuget_packages>
     
     /// <summary>
@@ -24,6 +32,14 @@ internal abstract class Program
     /// <param name="args"></param>
     public static void Main(string[] args)
     {
-        AnsiConsole.WriteLine("Hello World!");
-    }   
+        // Title
+        Console.WriteLine(FiggleFonts.Larry3d.Render("Passman"));
+
+        var init = new Init();
+    }
+
+    private void Render()
+    {
+        
+    }
 }
